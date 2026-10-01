@@ -1,0 +1,344 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #18396b;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    height: 78px;
+    background-color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 35px;
+}
+
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.logo-icon {
+    width: 48px;
+    height: 48px;
+
+    background-color: #1d3f73;
+    color: white;
+
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 25px;
+}
+
+
+/* MENU */
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #18396b;
+
+    font-size: 20px;
+
+    padding: 17px 26px;
+
+    border-radius: 13px;
+}
+
+nav a:hover {
+    background-color: #edf4ff;
+}
+
+nav a.active {
+    background-color: #dceaff;
+    color: #2461db;
+}
+
+
+/* AUTH */
+
+.auth {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.connexion {
+    text-decoration: none;
+    color: #102f5c;
+
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.auth button {
+    border: none;
+    background-color: #1d3f73;
+    color: white;
+
+    padding: 18px 32px;
+
+    border-radius: 17px;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    position: relative;
+
+    min-height: calc(100vh - 78px);
+
+    background-color: #213f73;
+
+    overflow: hidden;
+
+    color: white;
+}
+
+
+/* CERCLES */
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+
+    background-color: rgba(51, 88, 145, 0.25);
+}
+
+.circle1 {
+    width: 600px;
+    height: 600px;
+
+    right: -50px;
+    top: -260px;
+}
+
+.circle2 {
+    width: 350px;
+    height: 350px;
+
+    left: -100px;
+    bottom: -250px;
+}
+
+
+/* CONTENU */
+
+.hero-content {
+    width: 810px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    padding-top: 96px;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* BADGE */
+
+.badge {
+    width: fit-content;
+
+    margin-bottom: 55px;
+
+    padding: 15px 24px;
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    border-radius: 30px;
+
+    background-color: rgba(255, 255, 255, 0.08);
+
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.badge span {
+    display: inline-block;
+
+    width: 12px;
+    height: 12px;
+
+    background-color: #18ad68;
+
+    border-radius: 50%;
+
+    margin-right: 10px;
+}
+
+
+/* TITRE */
+
+h1 {
+    font-size: 76px;
+    line-height: 1.08;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 35px;
+}
+
+h1 span {
+    color: #aebbd2;
+}
+
+
+/* DESCRIPTION */
+
+.hero p {
+    font-size: 27px;
+    line-height: 1.55;
+
+    color: #d6ddeb;
+
+    margin-bottom: 60px;
+}
+
+
+/* BUTTONS */
+
+.buttons {
+    display: flex;
+    gap: 23px;
+}
+
+.buttons button {
+    height: 75px;
+
+    padding: 0 45px;
+
+    border-radius: 17px;
+
+    font-size: 22px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.btn-primary {
+    border: none;
+
+    background-color: #2868ed;
+
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #1957d5;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    border: 1px solid rgba(255,255,255,0.25);
+
+    background-color: rgba(255,255,255,0.08);
+
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(255,255,255,0.15);
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1000px) {
+
+    nav {
+        display: none;
+    }
+
+    .hero-content {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 55px;
+    }
+
+    .hero p {
+        font-size: 21px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 0 15px;
+    }
+
+    .connexion {
+        display: none;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .auth button {
+        padding: 12px 18px;
+    }
+
+    .hero-content {
+        padding-top: 60px;
+    }
+
+    .badge {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 43px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .buttons button {
+        width: 100%;
+    }
+}
